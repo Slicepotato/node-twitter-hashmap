@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Twitter Output</title>
+    <style>
+        #map_canvas {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+      <header>
+          <h1>Stuff and Nonsense</h1>
+      </header>
+      <main>
+          <div id="map_canvas"></div>
+          
+          <ul id="catch-all"></ul>
+      </main>
+      <footer></footer>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBazST4tP32T9kwFGupdiBIATFeSuscSas&callback=initMap"></script>
+      <script type="text/javascript" src="/js/script.js"></script>
+  </body>
+</html>
