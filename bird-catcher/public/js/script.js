@@ -52,9 +52,10 @@ $(document).ready(function(){
         addMarker(data);
     });
     
-    socket.on('hashtags', function(hash) {
-        $.each(hash, function(k,v){
-            $('#hash-list').append('<li><span>' + v + '</span></li>');
-        });
+    socket.on('hashlist', function(data) {
+        for( var i = 0, l = data.hash.length; i < l; i++ )
+        {
+            $('#hash-list').append('<li><span>' + data.hash[i] + '</span></li>');
+        }
     });
 });
