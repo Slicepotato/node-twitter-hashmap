@@ -51,4 +51,10 @@ $(document).ready(function(){
         
         addMarker(data);
     });
+    
+    socket.on('hashtags', function(hash) {
+        $.each(hash, function(k,v){
+            $('#hash-list').append('<li><span>' + v + '</span></li>');
+        });
+    });
 });
