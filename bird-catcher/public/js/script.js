@@ -27,7 +27,7 @@ function addMarker(loc){
     var infoWindow = new google.maps.InfoWindow();
 
     google.maps.event.addListener(marker, "click", function() {
-        infoWindow.close(map, marker);
+        infoWindow.close(map);
         //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
         infoWindow.setContent(tweetMeta);
         infoWindow.open(map, this);
