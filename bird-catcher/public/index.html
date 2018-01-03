@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
     <title>Twitter Output</title>
     <style>
         #map_canvas {
@@ -13,7 +14,8 @@
   </head>
   <body>
       <header>
-          <h1>Stuff and Nonsense</h1>
+          <h1>Mapping Twitter Posts</h1>
+          <p>Currently tracking: #newyear, #backtowork, #HappyNewYear</p>
       </header>
       <main>
           <div id="map_canvas"></div>
@@ -24,7 +26,8 @@
       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="/socket.io/socket.io.js"></script>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBazST4tP32T9kwFGupdiBIATFeSuscSas&callback=initMap"></script>
+      <script type="text/javascript" src="/js/marker-clusterer.js"></script>
       <script type="text/javascript" src="/js/script.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBazST4tP32T9kwFGupdiBIATFeSuscSas&callback=initMap"></script>
   </body>
 </html>

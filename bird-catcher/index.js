@@ -15,7 +15,7 @@ var twit = new twitter(config);
 
 io.on('connection', function(socket){
     console.log('a user connected');
-    var stream = twit.stream('statuses/filter', { track: '#NewYearsDay', language: 'en' }); // get is the function to search the tweet which three paramaters 'search/tweets',params and a callback function.
+    var stream = twit.stream('statuses/filter', { track: '#RollTide, #GoDawgs, #HappyNewYear, #TheBachelor, #RoseBowl', language: 'en' }); // get is the function to search the tweet which three paramaters 'search/tweets',params and a callback function.
     stream.on('tweet', function (tweet) {
        if(tweet.coordinates != null) { 
             var outputPoint = {"user": tweet.user.screen_name, "time": tweet.created_at, "text": tweet.text, "lat": tweet.coordinates.coordinates[0],"lng": tweet.coordinates.coordinates[1]};
