@@ -20,10 +20,10 @@ io.on('connection', function(socket){
     socket.emit("hashlist", { hash: hashtags });
     var stream = twit.stream('statuses/filter', { track: hashtags, language: 'en' }); // get is the function to search the tweet which three paramaters 'search/tweets',params and a callback function.
     stream.on('tweet', function (tweet) {
-       if(tweet.coordinates != null) { 
+       if(tweet.coordinates != null) {
             var outputPoint = {"user": tweet.user.screen_name, "time": tweet.created_at, "text": tweet.text, "lat": tweet.coordinates.coordinates[0],"lng": tweet.coordinates.coordinates[1]};
             socket.emit("twitter-stream", outputPoint);
-            
+
             console.log(outputPoint);
         }
         /* console.log(tweet); */
