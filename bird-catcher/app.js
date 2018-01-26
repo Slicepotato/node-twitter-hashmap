@@ -17,7 +17,7 @@ app.use('/css',express.static(__dirname + '/public/css'));
 //Setup twitter stream api
 var twit = new twitter(config);
 
-var hashtags = ['#hirefoodtrucks','#502foodie','#louisvillefood','#louisvillefoodie','#eatthestreet','#eatlouisville','#foodtruck','#tastelouisville','#eatlovelouisville','#HappyNewYear','#NewYear','#NewYearsDay','#WeirdWinterHobbies','#HRX2018','#Trump','#MisheardLyrics','#DisappointMeIn4Words','#MeToo'];
+var hashtags = ['#hirefoodtrucks','#502foodie','#louisvillefood','#louisvillefoodie','#eatthestreet','#eatlouisville','#foodtruck','#tastelouisville','#eatlovelouisville','#HappyNewYear','#NewYear','#NewYearsDay','#WeirdWinterHobbies','#HRX2018','#Trump','#MisheardLyrics','#DisappointMeIn4Words','#MeToo','#ReleaseTheMemo','#FridayFeeling','#Friday','#MAGA','#traffic','TGIF'];
 
 io.on('connection', function(socket){
     console.log('a user connected');
