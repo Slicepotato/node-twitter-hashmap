@@ -3,7 +3,7 @@ var mc;
 var markers = [];
 var socket = io.connect('http://hashmap.derbycitydesignlab.com:3000');
 
-window.initMap = function() {
+function initMap() {
     var mapOptions = {
         zoom: 2,
         center: new google.maps.LatLng(0.0,0.0),
